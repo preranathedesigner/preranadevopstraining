@@ -20,12 +20,11 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-- task: CopyFiles@2
+steps:
+- task: UseDotNet@2
+  displayName: 'Install .NET Core SDK'
   inputs:
-    Contents: '**/.war'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-    projects: '**/*.csproj'
+    version: 6.x
+    performMultiLevelLookup: true
+    includePreviewVersions: true # Required for preview versions
     
