@@ -27,4 +27,3 @@ steps:
     version: 6.x
     performMultiLevelLookup: true
     includePreviewVersions: true # Required for preview versions
-    
