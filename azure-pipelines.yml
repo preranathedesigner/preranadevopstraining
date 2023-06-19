@@ -28,9 +28,4 @@ steps:
   inputs:
     command: 'build'
     projects: '**/*.csproj'
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'warfile'
-    publishLocation: 'Container'
     
