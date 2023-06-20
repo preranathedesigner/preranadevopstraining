@@ -20,7 +20,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-- task: DotNetCoreCLI@2
+- task: DotNetCoreCLI@3
   inputs:
     command: 'build'
     projects: '**/*.csproj'
