@@ -25,3 +25,7 @@ steps:
     command: 'build'
     projects: '**/*.csproj'
     arguments: '$(BuildConfiguration)'
+- task: CopyFiles@2
+  inputs:
+    Contents: '**/*.war'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
